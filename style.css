@@ -103,5 +103,25 @@ body {
   text-align: left;
   color: white;
   position: relative;
-  left: 24px;
+  left: 25px;
+}
+
+@media (max-width: 550px) {
+  .stylish {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .name {
+    color: #333;
+    display: none;
+  }
+
+  .alias {
+    color: white;
+  }
+
+  .winner {
+    position: static;
+  }
 }
