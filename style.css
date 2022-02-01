@@ -14,10 +14,16 @@ body {
   padding: 10px;
   margin: 10px;
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+
+.stylish {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main {
@@ -91,4 +97,11 @@ body {
 .name {
   text-align: right;
   color: white;
+}
+
+.winner {
+  text-align: left;
+  color: white;
+  position: relative;
+  left: 24px;
 }
