@@ -39,51 +39,15 @@ body {
   justify-content: space-between;
 }
 
-.column_1 {
+.column_1, .column_2, .column_3 {
   width: 100%;
   height: 30%;
   display: flex;
   justify-content: space-between;
 }
 
-.column_1 div {
+.column_1 div, .column_2 div, .column_3 div {
   background: transparent;
-  border: solid 1px #333;
-  width: 30%;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 60px;
-  font-family: Georgia, "Times New Roman", Times, serif;
-}
-
-.column_2 {
-  width: 100%;
-  height: 30%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.column_2 div {
-  border: solid 1px #333;
-  width: 30%;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 60px;
-  font-family: Georgia, "Times New Roman", Times, serif;
-}
-
-.column_3 {
-  width: 100%;
-  height: 30%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.column_3 div {
   border: solid 1px #333;
   width: 30%;
   border-radius: 10px;
@@ -106,6 +70,35 @@ body {
   left: 25px;
 }
 
+.alias {
+  color: white;
+  visibility: hidden;
+}
+
+.reset_button {
+  position: relative;
+  left: 25px;
+}
+
+button {
+  padding: 5px;
+  margin: 10px;
+  width: 100px;
+  border: white 2px solid;
+  border-radius: 5px;
+  background: none;
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+button:hover {
+  border: crimson 2px solid;
+}
+
+button:active {
+  color: crimson;
+}
+
 @media (max-width: 550px) {
   .stylish {
     display: flex;
@@ -118,10 +111,49 @@ body {
   }
 
   .alias {
-    color: white;
+    visibility: visible;
   }
 
   .winner {
     position: static;
   }
+
+  .reset_button {
+    position: static;
+  }
+}
+
+@media (max-width: 420px) {
+  .main {
+    height: 350px;
+    width: 350px;
+  }
+
+  .column_1 div, .column_2 div, .column_3 div {
+    font-size: 55px;
+}
+
+@media (max-width: 376px) {
+  .aligner {
+    height: 96vh;
+    width: 96vw;
+  }
+
+  .main {
+    height: 290px;
+    width: 290px;
+  }
+
+  .column_1 div, .column_2 div, .column_3 div {
+    font-size: 45px;
+}
+
+@media (max-width: 340px) {
+  .main {
+    height: 250px;
+    width: 250px;
+  }
+
+  .column_1 div, .column_2 div, .column_3 div {
+    font-size: 40px;
 }

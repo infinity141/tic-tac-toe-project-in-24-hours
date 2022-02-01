@@ -1,3 +1,4 @@
+var reset = document.getElementById("restart");
 var data = [];
 var buttons = [...document.querySelectorAll(".main .row div")];
 var counter = 0;
@@ -9,6 +10,16 @@ var wining_announcement = document.getElementById("gameStatus");
 buttons.forEach(function(ele, index){
     ele.addEventListener("click", function(addEventListener){
         console.log(index);
+        reset.addEventListener("click", function(addEventListener){
+            data = [];
+            ele.innerHTML = "";
+            wining_announcement.innerHTML = "O's Turn";
+            counter = 0;
+            going = true;
+            x_wins = false;
+            o_wins = false;
+            sum = 0;
+        })
         if (data[index] == undefined){
             if (counter % 2 == 0 && going == true){
                 ele.innerHTML = "O";
@@ -44,5 +55,3 @@ buttons.forEach(function(ele, index){
         }
     })
 })
-
-// || data[3] == 'O' && data[4] == 'O' && data[5] == 'O' || data[6] == 'O' && data[7] == 'O' && data[8] == 'O' || data[0] == 'O' && data[4] == 'O' && data[8] == 'O' || data[2] == 'O' && data[4] == 'O' && data[6] == 'O' || data[0] == 'O' && data[3] == 'O' && data[6] == 'O' || data[1] == 'O' && data[4] == 'O' && data[7] == 'O' || data[2] == 'O' && data[5] == 'O' && data[8] == 'O'
